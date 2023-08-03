@@ -41,4 +41,7 @@ Route::get('/tes', function () {
     return view('test_tailwind');
 });
 
+Route::get('/homepage', function () {
+    return view('homepage');
+});
 require __DIR__.'/auth.php';
