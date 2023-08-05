@@ -62,7 +62,7 @@
                     <li>2 teaspoons aniseed</li>
                     <li>4 garlic cloves, finely chopped</li>
                     <li>¼ cup fresh lime juice, plus wedges for serving</li>
-                    <li>¼ cup reduced-sodium soy sauce</li>
+                    <li>¼ cup reduced-sodium soy sauce eenendf</li>
                     <li>2 tablespoons honey</li>
                     <li>8 chicken thighs (about 4 lb.)</li>
                 </ul>
