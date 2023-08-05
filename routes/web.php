@@ -44,4 +44,9 @@ Route::get('/tes', function () {
 Route::get('/homepage', function () {
     return view('homepage');
 });
+
+Route::get('/resep', function () {
+    return view('resep');
+});
+
 require __DIR__.'/auth.php';
