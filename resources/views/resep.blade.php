@@ -56,8 +56,8 @@
       <p class="ml-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias pariatur molestias ab unde nemo non magni veritatis assumenda enim praesentium?</p>
   
       <div class="grid grid-cols-4 gap-4 ml-5 my-10">
-          <div class="text-3xl font-normal bg-slate-100 px-8">Bahan:
-            <div class="text-base"> 
+          <div class="text-3xl font-normal bg-slate-100 px-8 ">Bahan:
+            <div class="text-base mt-6"> 
                 <ul class="list-disc block bg-slate-100">
                     <li>2 teaspoons aniseed</li>
                     <li>4 garlic cloves, finely chopped</li>
@@ -71,7 +71,7 @@
   
           <div class="text-3xl font-normal col-span-3 px-8">
             Cara:
-            <div class="text-base"> 
+            <div class="text-base mt-6"> 
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla elit, eleifend ut finibus ac, mollis id eros. Phasellus felis mauris, auctor imperdiet orci non, finibus vehicula libero. Aliquam id augue at ex consectetur viverra. Duis sed tincidunt tortor. Vivamus finibus eget mauris tempor aliquam. Suspendisse porta vestibulum lorem et tincidunt. Suspendisse potenti. Vestibulum non volutpat magna. Maecenas semper, ex eget commodo posuere, odio lorem auctor urna, sit amet rhoncus erat ex eget est.
   
             Quisque auctor ipsum felis, nec venenatis quam ullamcorper eu. Donec convallis orci vitae ultricies tincidunt. Sed at nisi placerat, hendrerit est finibus, gravida nisi. Quisque cursus nulla pulvinar purus consequat, et tempus elit euismod. Praesent tempor odio mi, sit amet maximus turpis convallis eu. Nam id purus sapien. Sed eleifend libero mollis volutpat vulputate. Sed rhoncus dapibus odio, et tempus quam molestie nec. Cras eu leo diam. Integer vitae aliquam arcu, at finibus ante. Vestibulum sit amet tortor sapien. Curabitur condimentum quam quis metus lacinia euismod. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer convallis bibendum felis vitae iaculis.
