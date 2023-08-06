@@ -53,7 +53,7 @@
       <h1 class="font-bold ml-28 text-3xl font-[inter]">
         Deskripsi
       </h1>
-      <p class=" mt-5 text-xl font-[roboto] mx-28">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias pariatur molestias ab unde nemo non magni veritatis assumenda enim praesentium?</p>
+      <p class=" mt-5 text-xl font-[roboto] mx-28">Soto Bandung adalah soto khas Bandung, Jawa Barat. Sepintas, soto yang berbahan dasar daging sapi (biasanya bagian tetelan atau has dalam) ini hampir sama dengan jenis soto yang lain, tetapi yang membuatnya berbeda adalah adanya tambahan lobak, tomat, dan kedelai goreng di dalamnya. Soto tanpa santan ini biasa disantap dengan nasi dan kerupuk.</p>
   
       <div class="grid grid-cols-4 gap-4 ml-28 my-10">
           <div class="text-3xl font-bold bg-slate-100 px-8 pt-6 font-[inter] ">Bahan:
