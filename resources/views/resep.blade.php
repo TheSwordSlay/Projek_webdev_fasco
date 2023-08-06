@@ -14,14 +14,14 @@
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </label>
       </div> 
-      <div class="flex-1 px-2 mx-2">Navbar Title</div>
+      <div class="flex-1 px-2 mx-2">RESEP</div>
       <div class="flex-none hidden lg:block">
         <ul class="menu menu-horizontal">
           <!-- Navbar menu contenhttps://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpgt here -->
           <div class="form-control">
       <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
     </div>
-          <li><a>Navbar Item 2</a></li>
+          <li><a>LOGIN</a></li>
         </ul>
       </div>
     </div>
@@ -42,39 +42,54 @@
     <!-- akhir navbar -->
 
     <div class="container px-4">
-      <div class="text-center text-3xl font-medium mt-8">
-          Resep
+      <div class="text-center text-3xl font-medium mt-8 font-[inter]">
+          RESEP SOTO BANDUNG
       </div>
   
       <div class="my-12 mx-12 flex justify-center">
-          <img src="https://2.bp.blogspot.com/-VckZ2bd4oH4/WcTUzSJiWBI/AAAAAAAAApY/7L7l2ai44yYZlghoAtrRtTRRM85e8uR7ACEwYBhgL/s1600/Kuliner%2BPedas1.jpg" class="max-h-[550px]"></img>
+          <img src="https://cdn-2.tstatic.net/wow/foto/bank/images/soto-bandung.jpg" class="max-h-[400px] w-[1000px] brightness-75"></img>
       </div>
   
-      <h1 class="font-bold ml-5">
+      <h1 class="font-bold ml-28 text-3xl font-[inter]">
         Deskripsi
       </h1>
-      <p class="ml-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias pariatur molestias ab unde nemo non magni veritatis assumenda enim praesentium?</p>
+      <p class=" mt-5 text-xl font-[roboto] mx-28">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias pariatur molestias ab unde nemo non magni veritatis assumenda enim praesentium?</p>
   
-      <div class="grid grid-cols-4 gap-4 ml-5 my-10">
-          <div class="text-3xl font-normal bg-slate-100 px-8 ">Bahan:
-            <div class="text-base mt-6"> 
+      <div class="grid grid-cols-4 gap-4 ml-28 my-10">
+          <div class="text-3xl font-bold bg-slate-100 px-8 pt-6 font-[inter] ">Bahan:
+            <div class="text-xl mt-6 font-normal font-[roboto]"> 
                 <ul class="list-disc block bg-slate-100">
-                    <li>2 teaspoons aniseed</li>
-                    <li>4 garlic cloves, finely chopped</li>
-                    <li>¼ cup fresh lime juice, plus wedges for serving</li>
-                    <li>¼ cup reduced-sodium soy sauce eenendf</li>
-                    <li>2 tablespoons honey</li>
-                    <li>8 chicken thighs (about 4 lb.)</li>
+                    <li>350 gram daging di potong</li>
+                    <li>1 buah lobak kecil</li>
+                    <li>1 batang sereh</li>
+                    <li>1 lembar daun salam</li>
+                    <li>1 lembar daun jeruk</li>
+                    <li>1 ruas lengkuas dan jahe</li>
+                    <li>garam dan kaldu</li>
+                    <li>air 500 ml dan 1000 ml</li>
+                    <li>minyak goreng</li>
+                    <li>5 siung bawang merah</li>
+                    <li>2 siung bawang putih</li>
+                    <li>1/2 sdt lada butir</li>
+                    <li>kacang kedelai rebus</li>
+                    <li>emping</li>
+                    <li>sambal</li>
+                    <li>seledri</li>
+                    <li>bawang goreng</li>
                 </ul>
             </div>
           </div>
   
-          <div class="text-3xl font-normal col-span-3 px-8">
-            Cara:
-            <div class="text-base mt-6"> 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nulla elit, eleifend ut finibus ac, mollis id eros. Phasellus felis mauris, auctor imperdiet orci non, finibus vehicula libero. Aliquam id augue at ex consectetur viverra. Duis sed tincidunt tortor. Vivamus finibus eget mauris tempor aliquam. Suspendisse porta vestibulum lorem et tincidunt. Suspendisse potenti. Vestibulum non volutpat magna. Maecenas semper, ex eget commodo posuere, odio lorem auctor urna, sit amet rhoncus erat ex eget est.
-  
-            Quisque auctor ipsum felis, nec venenatis quam ullamcorper eu. Donec convallis orci vitae ultricies tincidunt. Sed at nisi placerat, hendrerit est finibus, gravida nisi. Quisque cursus nulla pulvinar purus consequat, et tempus elit euismod. Praesent tempor odio mi, sit amet maximus turpis convallis eu. Nam id purus sapien. Sed eleifend libero mollis volutpat vulputate. Sed rhoncus dapibus odio, et tempus quam molestie nec. Cras eu leo diam. Integer vitae aliquam arcu, at finibus ante. Vestibulum sit amet tortor sapien. Curabitur condimentum quam quis metus lacinia euismod. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer convallis bibendum felis vitae iaculis.
+          <div class="text-3xl font-bold col-span-3 px-8 font-[inter]">
+            Cara Membuat:
+            <div class="text-xl mt-6 font-normal font-[roboto]"> 
+              <ol class="list-decimal">
+                <li> Rebus daging. Diamkan selama 30 menit</li>
+                <li>Angkat daging, cuci bersih.</li>
+                <li>Rebus daging lagi dengan campuran serai, jahe, lengkuas, daun salam, dan daun jeruk.</li>
+                <li>Tumis bumbu halus, tuang ke rebusan daging. Beri garam dan kaldu bubuk.</li>
+                <li>Sajikan soto dengan pelengkap.</li>
+              </ol>.
             </div>
   
           </div>
