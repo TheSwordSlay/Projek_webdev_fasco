@@ -19,11 +19,11 @@
       <div class="flex-1 px-2 mx-2">Navbar Title</div>
       <div class="flex-none hidden lg:block">
         <ul class="menu menu-horizontal">
-          <!-- Navbar menu contenhttps://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpgt here -->
+          <!-- Navbar menu conten https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpgt here -->
           <div class="form-control">
       <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
     </div>
-          <li><a>Navbar Item 2</a></li>
+          <li><a>LOGIN</a></li>
         </ul>
       </div>
     </div>
@@ -44,29 +44,29 @@
 <!-- akhir navbar -->
 
 <div class="carousel w-full">
-  <div id="slide1" class="carousel-item relative w-full">
-    <img src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" class="w-full" />
+  <div id="slide1" class="carousel-item relative max-h-[500px] w-full">
+    <img src="https://wallpaperaccess.com/full/1324980.jpg" class="w-full" />
     <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide4" class="btn btn-circle"></a> 
       <a href="#slide2" class="btn btn-circle"></a>
     </div>
   </div> 
-  <div id="slide2" class="carousel-item relative w-full">
-    <img src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" class="w-full" />
+  <div id="slide2" class="carousel-item relative max-h-[500px] w-full">
+    <img src="https://mnews-wp.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2020/09/30152629/Kuliner-Indonesia.jpg" class="w-full" />
     <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide1" class="btn btn-circle"></a> 
       <a href="#slide3" class="btn btn-circle"></a>
     </div>
   </div> 
-  <div id="slide3" class="carousel-item relative w-full">
-    <img src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" class="w-full" />
+  <div id="slide3" class="carousel-item relative max-h-[500px] w-full">
+    <img src="https://asset.kompas.com/crops/-8_skPad__EKu4DpDs6TSFNWi3c=/0x0:1000x667/750x500/data/photo/2019/12/18/5df9e59f4c8b0.jpg" class="w-full" />
     <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide2" class="btn btn-circle"></a> 
       <a href="#slide4" class="btn btn-circle"></a>
     </div>
   </div> 
-  <div id="slide4" class="carousel-item relative w-full">
-    <img src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" class="w-full" />
+  <div id="slide4" class="carousel-item relative max-h-[500px] w-full">
+    <img src="https://www.coolasleicester.co.uk/wp-content/uploads/2020/02/Giggling-Squid-Hero-Shot-scaled.jpg" class="w-full" />
     <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide3" class="btn btn-circle"></a> 
       <a href="#slide1" class="btn btn-circle"></a>
@@ -74,21 +74,21 @@
   </div>
 </div>
 
-<div class="text-center text-2xl font-medium mt-8">Resep Makanan</div>
+<div class="text-center text-3xl font-medium mt-8">Resep Makanan</div>
 
 <!-- akhir slide -->
-<div class="grid grid-cols-3 gap-4 my-12 mx-24">
+<div class="grid grid-cols-3 gap-4 my-16 mx-24">
 <div class="card bg-base-100 shadow-xl">
-  <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+  <figure><img src="https://cdn-2.tstatic.net/wow/foto/bank/images/soto-bandung.jpg" alt="Soto Bandung" /></figure>
   <div class="card-body">
     <h2 class="card-title">
-      Shoes!
+      Soto
       <div class="badge badge-secondary">NEW</div>
     </h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <p>Soto Bandung adalah soto khas Bandung, Jawa Barat</p>
     <div class="card-actions justify-end">
-      <div class="badge badge-outline">Fashion</div> 
-      <div class="badge badge-outline">Products</div>
+      <div class="badge badge-outline">Bandung</div> 
+      <div class="badge badge-outline">Rini</div>
     </div>
   </div>
 </div>
