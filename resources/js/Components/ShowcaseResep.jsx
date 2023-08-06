@@ -7,7 +7,9 @@ const ShowCaseResep = (resep) => {
                         <figure><img src={data.gambar} alt="Shoes" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title">
-                                {data.title}
+                                    <a href={"resep/"+data.id}>
+                                        {data.title}
+                                    </a>
                                 </h2>
                                 <p>{data.deskripsi.substring(0,100)}...</p>
                                 <div className="card-actions justify-end">

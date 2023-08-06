@@ -4,7 +4,7 @@ const Navbar = ({user}) => {
     return (
 <div className="navbar bg-neutral text-white">
   <div className="flex-1">
-    <a className="btn btn-ghost text-white normal-case text-xl">KulinerFest</a>
+    <a className="btn btn-ghost text-white normal-case text-xl" href="/">KulinerFest</a>
   </div>
   <div className="flex-none gap-2">
     <div className="form-control">

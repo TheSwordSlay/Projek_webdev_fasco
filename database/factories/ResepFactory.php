@@ -23,9 +23,9 @@ class ResepFactory extends Factory
             'tipe' => "Dinner",
             'gambar' => "img/foodExample.webp",
             'daerah' => "Sumatera Selatan",
-            'deskripsi' => fake()->sentence(mt_rand(10,25)),
-            'langkah' => [fake()->sentence(mt_rand(3, 6)), fake()->sentence(mt_rand(3, 6)), fake()->sentence(mt_rand(3, 6)), fake()->sentence(mt_rand(3, 6))],
-            'bahan' => [fake()->sentence(2), fake()->sentence(2), fake()->sentence(2), fake()->sentence(2)],
+            'deskripsi' => fake()->sentence(10),
+            'langkah' => [fake()->sentence(20), fake()->sentence(20), fake()->sentence(20), fake()->sentence(20), fake()->sentence(20), fake()->sentence(20), fake()->sentence(20), fake()->sentence(20)],
+            'bahan' => [fake()->sentence(2), fake()->sentence(2), fake()->sentence(2), fake()->sentence(2), fake()->sentence(2)],
             'like' => 0,
             'dislike' => 0,
         ];

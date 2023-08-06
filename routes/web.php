@@ -32,6 +32,12 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/resep', function () {
+    return Inertia::render('Resep');
+});
+
+Route::get('/resep/{resep:id}', [ResepController::class, 'show']);
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -46,10 +52,6 @@ Route::get('/tes', function () {
 
 Route::get('/homepage', function () {
     return view('homepage');
-});
-
-Route::get('/resep', function () {
-    return view('resep');
 });
 
 require __DIR__.'/auth.php';

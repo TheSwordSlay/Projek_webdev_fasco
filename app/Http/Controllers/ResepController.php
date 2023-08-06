@@ -19,6 +19,14 @@ class ResepController extends Controller
         ]);
     }
 
+    // nunjukin untuk homepage
+    // public function homepage()
+    // {
+    //     return Inertia::render('Homepage', [
+    //         'resep' => Resep::all()
+    //     ]);
+    // }
+
     /**
      * Show the form for creating a new resource.
      */
@@ -40,7 +48,9 @@ class ResepController extends Controller
      */
     public function show(Resep $resep)
     {
-        //
+        return Inertia::render('Resep', [
+            "resep" => $resep
+        ]);
     }
 
     /**
