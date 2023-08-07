@@ -1,9 +1,4 @@
-import Langkah from "@/Components/Langkah";
-import Bahan from "@/Components/Bahan";
-
-
 const OneResep = (resep) => {
-    console.log(resep)
     return(
         <div>
 
@@ -26,7 +21,7 @@ const OneResep = (resep) => {
           <div className="text-3xl font-bold bg-slate-100 px-8 pt-6 font-[inter] ">Bahan:
             <div className="text-xl mt-6 font-normal font-[roboto]"> 
                 <ul className="list-disc block bg-slate-100">
-                    <Bahan bahan={resep.resep.bahan}></Bahan>
+                    {resep.resep.bahan.map((data, i) => <li key={i}>{data}</li>)}
                     {/* <li>350 gram daging di potong</li>
                     <li>1 buah lobak kecil</li>
                     <li>1 batang sereh</li>
@@ -52,7 +47,7 @@ const OneResep = (resep) => {
             Cara Membuat:
             <div className="text-xl mt-6 font-normal font-[roboto]"> 
               <ol className="list-decimal">
-                <Langkah langkah={resep.resep.langkah}></Langkah>
+                {resep.resep.langkah.map((data, i) => <li key={i}>{data}</li>)}
               </ol>.
             </div>
   

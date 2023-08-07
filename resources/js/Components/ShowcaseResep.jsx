@@ -4,7 +4,7 @@ const ShowCaseResep = (resep) => {
         return (
             <div key={i}>
                     <div className="card bg-base-100 shadow-xl">
-                        <figure><img src={data.gambar} alt="Shoes" /></figure>
+                        <figure><a href={"resep/"+data.id}><img src={data.gambar} alt="Shoes" /></a></figure>
                             <div className="card-body">
                                 <h2 className="card-title">
                                     <a href={"resep/"+data.id}>

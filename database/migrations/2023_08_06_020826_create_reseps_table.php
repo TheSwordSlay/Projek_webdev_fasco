@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('tipe');
             $table->string('gambar');
             $table->string('daerah');
-            $table->string('deskripsi');
+            $table->text('deskripsi');
             $table->json('langkah');
             $table->json('bahan');
             $table->integer('like');

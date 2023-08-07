@@ -19,4 +19,5 @@
     <body class="font-sans antialiased">
         @inertia
     </body>
+    <script src="/js/jquery.js"></script>
 </html>

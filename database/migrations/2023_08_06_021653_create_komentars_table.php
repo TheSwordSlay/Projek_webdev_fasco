@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('resep_id');
             $table->foreignId('reply_id');
             $table->string('commenterId');
-            $table->string('komentar');
+            $table->text('komentar');
             $table->timestamps();
         });
     }

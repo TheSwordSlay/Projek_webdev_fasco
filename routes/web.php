@@ -32,6 +32,10 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/add-resep', function () {
+    return Inertia::render('AddResep');
+})->middleware(['auth', 'verified'])->name('add-resep');
+
 Route::get('/resep', function () {
     return Inertia::render('Resep');
 });

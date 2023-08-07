@@ -10,7 +10,7 @@ export default function Homepage(props) {
         <div>   
             <Head title="Homepage"/>
             <Navbar />
-            <Carousel />
+            <Carousel image={props.resep}/>
             <div className="grid grid-cols-3 gap-4 my-12 mx-24">
             <ShowCaseResep resep={props.resep}/>
             </div>

@@ -19,11 +19,11 @@ class ResepFactory extends Factory
     {
         return [
             'user_id' => mt_rand(1,3),
-            'title' => fake()->sentence(mt_rand(1,3)),
+            'title' => fake()->sentence(2),
             'tipe' => "Dinner",
             'gambar' => "img/foodExample.webp",
             'daerah' => "Sumatera Selatan",
-            'deskripsi' => fake()->sentence(10),
+            'deskripsi' => fake()->sentence(50),
             'langkah' => [fake()->sentence(20), fake()->sentence(20), fake()->sentence(20), fake()->sentence(20), fake()->sentence(20), fake()->sentence(20), fake()->sentence(20), fake()->sentence(20)],
             'bahan' => [fake()->sentence(2), fake()->sentence(2), fake()->sentence(2), fake()->sentence(2), fake()->sentence(2)],
             'like' => 0,
