@@ -18,10 +18,10 @@ class ResepFactory extends Factory
     public function definition(): array
     {
         return [
-            'user_id' => mt_rand(1,3),
+            'user_id' => rand(1, 4),
             'title' => fake()->sentence(2),
             'tipe' => "Dinner",
-            'gambar' => "img/foodExample.webp",
+            'gambar' => "post-images/example.webp",
             'daerah' => "Sumatera Selatan",
             'deskripsi' => fake()->sentence(50),
             'langkah' => [fake()->sentence(20), fake()->sentence(20), fake()->sentence(20), fake()->sentence(20), fake()->sentence(20), fake()->sentence(20), fake()->sentence(20), fake()->sentence(20)],

@@ -28,12 +28,11 @@ Route::get('/welcome', function () {
 
 Route::get('/', [ResepController::class, 'index']);
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [ResepController::class, 'showDashboard'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::post('/tambahresep', [ResepController::class, 'store'])->middleware(['auth', 'verified'])->name('tambahresep');
 
 Route::get('/add-resep', function () {
-    return Inertia::render('AddResep');
+    return Inertia::render('AddResep', ["accName" => auth()->user()]);
 })->middleware(['auth', 'verified'])->name('add-resep');
 
 Route::get('/resep', function () {
@@ -41,6 +40,8 @@ Route::get('/resep', function () {
 });
 
 Route::get('/resep/{resep:id}', [ResepController::class, 'show']);
+
+Route::post('/resep/delete', [ResepController::class, 'destroy'])->middleware(['auth', 'verified'])->name('delete.resep');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

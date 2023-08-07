@@ -9,7 +9,7 @@ const OneResep = (resep) => {
       </div>
   
       <div className="my-12 mx-12 flex justify-center">
-          <img src={"../" + resep.resep.gambar} className="max-h-[400px] w-[1000px] brightness-75"></img>
+          <img src={"../storage/" + resep.resep.gambar} className="max-h-[400px] w-[1000px] brightness-75"></img>
       </div>
   
       <h1 className="font-bold ml-28 text-3xl font-[inter]">
