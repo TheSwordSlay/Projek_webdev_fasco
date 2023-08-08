@@ -33,11 +33,11 @@
                     </label>
                     <select class="select select-bordered w-full max-w-xs">
                         <option disabled selected>Tipe Makanan</option>
-                        <option>Makanan Ringan</option>
-                        <option>Makanan Sedang</option>
+                        <option>Cemilan</option>
+                        <option>Dessert</option>
                         <option>Makanan Berat</option>
                       </select>
-<div class="form-control">
+                    <div class="form-control">
                     <label class="label">
                       <span class="label-text">Pilih Asal Makanan</span>
                     </label>
