@@ -37,7 +37,7 @@ export default function Dashboard(props) {
             <div className="py-12">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <Link href={route('add-resep')}>
-                        <button className="btn btn-accent mb-3">Tambah Resep</button>
+                        <button className="btn btn-success mb-3">Tambah Resep</button>
                     </Link>
                             {flash.message &&
                                 <div className="alert alert-success my-4">
@@ -93,7 +93,11 @@ export default function Dashboard(props) {
                                     )
 
 
-                                }) : <tr>Kamu belum ada post</tr>}
+                                }) : <tr>
+                                    <div className='my-3 mx-5'>
+                                        Kamu tidak memiliki resep apapun
+                                    </div>
+                                    </tr>}
                                 </tbody>
                                 {/* foot */}
                                 <tfoot>

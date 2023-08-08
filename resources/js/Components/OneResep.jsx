@@ -1,10 +1,10 @@
 const OneResep = (resep) => {
     return(
-        <div>
+  <div>
 
 
     <div className="container px-4">
-      <div className="text-center text-3xl font-medium mt-8 font-[inter]">
+      <div className="text-center text-3xl font-bold mt-8 font-[inter]">
           {resep.resep.title}
       </div>
   
@@ -18,9 +18,9 @@ const OneResep = (resep) => {
       <p className=" mt-5 text-xl font-[roboto] mx-28">{resep.resep.deskripsi}</p>
   
       <div className="grid grid-cols-4 gap-4 ml-28 my-10">
-          <div className="text-3xl font-bold bg-slate-100 px-8 pt-6 font-[inter] ">Bahan:
+          <div className="text-3xl font-bold bg-base-100 pl-8 pt-6 font-[inter] rounded-lg ">Bahan:
             <div className="text-xl mt-6 font-normal font-[roboto]"> 
-                <ul className="list-disc block bg-slate-100">
+                <ul className="list-disc block mb-8">
                     {resep.resep.bahan.map((data, i) => <li key={i}>{data}</li>)}
                     {/* <li>350 gram daging di potong</li>
                     <li>1 buah lobak kecil</li>

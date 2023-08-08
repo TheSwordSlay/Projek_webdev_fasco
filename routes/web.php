@@ -39,7 +39,7 @@ Route::get('/resep', function () {
     return Inertia::render('Resep');
 });
 
-Route::get('/resep/{resep:id}', [ResepController::class, 'show']);
+Route::get('/resep/{resep:id}', [ResepController::class, 'show'])->name('resep');
 
 Route::post('/resep/delete', [ResepController::class, 'destroy'])->middleware(['auth', 'verified'])->name('delete.resep');
 

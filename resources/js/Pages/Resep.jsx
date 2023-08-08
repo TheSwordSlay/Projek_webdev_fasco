@@ -5,9 +5,9 @@ import OneResep from "@/Components/OneResep";
 
 export default function Resep(props) {
     return(
-        <div>   
+        <div className="bg-neutral-content">   
             <Head title="Resep"/>
-            <Navbar />
+            <Navbar user={props.auth.user}/>
             <OneResep resep={props.resep}/>
             <Footer />
         </div>

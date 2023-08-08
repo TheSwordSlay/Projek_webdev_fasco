@@ -148,12 +148,12 @@ export default function AddResep(props) {
                                 : <></>
                             }
                     <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg px-8 py-8">
-                        {image ? <img src={blobUrl()} alt="Makanan" /> : ""}
-                        <input type="file" key={filekey || 'b' } className="file-input file-input-bordered file-input-primary w-full max-w-xs mt-4 m-2" onChange={(image) => setImage(image.target.files[0])} />
+                        {image ? <img src={blobUrl()} alt="Makanan" className='h-40'/> : ""}
+                        <input type="file" key={filekey || 'b' } className="file-input file-input-bordered file-input-primary bg-white w-full max-w-xs mt-4 m-2" onChange={(image) => setImage(image.target.files[0])} />
 
-                        <input type="text" placeholder="Nama Makanan" className="m-2 input input-bordered input-primary w-full" onChange={(title) => setTitle(title.target.value)} value={title}/>
+                        <input type="text" placeholder="Nama Makanan" className="bg-white m-2 input input-bordered input-primary w-full" onChange={(title) => setTitle(title.target.value)} value={title}/>
 
-                        <input type="text" placeholder="Deskripsi Makanan" className="m-2 input input-bordered input-primary w-full" onChange={(description) => setDescription(description.target.value)} value={description}/>
+                        <textarea className="textarea textarea-bordered bg-white m-2 w-full" placeholder="Deskripsi Makanan" onChange={(description) => setDescription(description.target.value)} value={description}></textarea>
 
 
                         <div className='m-2'>
@@ -161,7 +161,7 @@ export default function AddResep(props) {
                             <label className="label">
                                 <span className="label-text">Pilih daerah asal makanan</span>
                             </label>
-                            <select className="select select-info w-full max-w-xs" value={daerah} onChange={e => setDaerah(e.target.value)}>
+                            <select className="select select-info w-full max-w-xs bg-white" value={daerah} onChange={e => setDaerah(e.target.value)}>
                             <option disabled selected value="">Pilih daerah makanan</option>
                             <option value="Sumatera Selatan">Sumatera Selatan</option>
                             <option value="Jawa Barat">Jawa Barat</option>
@@ -173,7 +173,7 @@ export default function AddResep(props) {
                             <label className="label">
                                 <span className="label-text">Pilih tipe makanan</span>
                             </label>
-                            <select className="select select-info w-full max-w-xs" value={tipe} onChange={e => setTipe(e.target.value)}>
+                            <select className="select select-info w-full max-w-xs bg-white" value={tipe} onChange={e => setTipe(e.target.value)}>
                             <option disabled selected value="">Pilih tipe makanan</option>
                             <option value="Cemilan">Cemilan</option>
                             <option value="Makanan berat">Makanan berat</option>
@@ -186,7 +186,7 @@ export default function AddResep(props) {
 
                         <div key={inputkey || 'a'}>
                             {jumlahbahan.map((data, i) => <div key={i}>
-                                <input type="text" placeholder={"Bahan ke - " + data} className="m-2 input input-bordered input-primary w-full" onChange={updateState(i)} value={bahan[i].bahan}/>
+                                <input type="text" placeholder={"Bahan ke - " + data} className="m-2 input input-bordered input-primary w-full bg-white" onChange={updateState(i)} value={bahan[i].bahan}/>
                                 </div> )}
                         </div>
 
@@ -195,7 +195,7 @@ export default function AddResep(props) {
 
                         <div key={inputkeyLangkah || 'c'}>
                             {jumlahlangkah.map((data, i) => <div key={i}>
-                                <input type="text" placeholder={"Langkah ke - " + data} className="m-2 input input-bordered input-primary w-full" onChange={updateStateLangkah(i)} value={langkah[i].langkah}/>
+                                <input type="text" placeholder={"Langkah ke - " + data} className="m-2 input input-bordered input-primary w-full bg-white" onChange={updateStateLangkah(i)} value={langkah[i].langkah}/>
                                 </div> )}
                         </div>
 
