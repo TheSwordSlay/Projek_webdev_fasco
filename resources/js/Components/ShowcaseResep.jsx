@@ -1,7 +1,8 @@
 import { Link } from "@inertiajs/react"
 
 const ShowCaseResep = (resep) => {
-    return resep.resep.slice(0).reverse().map((data, i) => {
+    const arr = resep.resep.slice(0).reverse()
+    return arr.slice(0, 4).map((data, i) => {
         return (
             <div key={i} className="my-4">
                     {/* <div className="card bg-base-100 shadow-xl">

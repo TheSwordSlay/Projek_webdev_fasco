@@ -1,9 +1,8 @@
 import { Link } from "@inertiajs/react";
 
 const Navbar = ({user}) => {
-  console.log(user)
     return (
-      <>
+      <div className="mx-12">
       {/* <div className="my-3"></div> */}
       {/* <hr class="drop-shadow-2xl" /> */}
         {/* <div className="navbar bg-neutral text-white">
@@ -45,15 +44,18 @@ const Navbar = ({user}) => {
             </div>
           </div>
         </div> */}
-
-<div className="navbar bg-neutral text-white">
+<div className="flex justify-center mb-5">
+  <object data="../img/kuliner-fest.svg" type="" width="350" height="153"></object>
+</div>      
+<hr class="h-1 bg-neutral" />
+<div className="navbar bg-neutral-content text-neutral">
   <div className="navbar-start">
     <Link href="/" method="GET" as="button"><a className="btn btn-ghost normal-case text-xl">KulinerFest</a></Link>
   </div>
   <div className="navbar-center flex">
-    <div className="px-1"><button className="btn btn-ghost">Ghost</button></div>
-    <div className="px-1"><button className="btn btn-ghost">Ghost</button></div>
-    <div className="px-1"><button className="btn btn-ghost">Ghost</button></div>
+    <div className="px-1"><button className="btn btn-ghost">Home</button></div>
+    <div className="px-1"><button className="btn btn-ghost">Resep</button></div>
+    <div className="px-1"><button className="btn btn-ghost">About us</button></div>
     {/* <ul className="menu menu-horizontal px-1">
       <li><a>Item 1</a></li>
       <li><a>Item 2</a></li>
@@ -63,11 +65,9 @@ const Navbar = ({user}) => {
   </div>
   <div className="navbar-end">
             <div className="dropdown dropdown-end">
-              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+              <label tabIndex={0} className="">
                 {!user ? <button className="btn btn-ghost mr-8">Login</button> :                 
-                <div className="w-10 rounded-full">
-                  <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                </div>}
+                <button className="btn btn-ghost mr-8">Logged In</button>}
 
               </label>
               <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52 z-[50] relative text-black">
@@ -92,9 +92,10 @@ const Navbar = ({user}) => {
             </div>
   </div>
 </div>
+<hr class="h-1 bg-neutral" />
 
         {/* <hr class="drop-shadow-2xl my-3" /> */}
-      </>
+      </div>
     );
 }
 

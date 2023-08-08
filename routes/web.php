@@ -26,7 +26,7 @@ Route::get('/welcome', function () {
     ]);
 });
 
-Route::get('/', [ResepController::class, 'index']);
+Route::get('/', [ResepController::class, 'index'])->name('homepage');
 
 Route::get('/dashboard', [ResepController::class, 'showDashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::post('/tambahresep', [ResepController::class, 'store'])->middleware(['auth', 'verified'])->name('tambahresep');

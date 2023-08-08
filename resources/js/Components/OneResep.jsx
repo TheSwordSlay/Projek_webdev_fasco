@@ -5,7 +5,7 @@ const OneResep = (resep) => {
 
     <div className="container px-4">
       <div className="text-center text-3xl font-bold mt-8 font-[inter]">
-          {resep.resep.title}
+          Resep {resep.resep.title}
       </div>
   
       <div className="my-12 mx-12 flex justify-center">

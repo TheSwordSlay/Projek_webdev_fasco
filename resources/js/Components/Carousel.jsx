@@ -2,24 +2,25 @@ import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-const Carousel = (images) => {
+const Carousel = (resep) => {
+    const a = resep.resep.length
     const fasel = false;
     return (
-        <div>
+        <div className='h-100'>
             <OwlCarousel className='owl-theme' loop margin={10} items="1" autoplay="true" autoplayTimeout="3000" dots={fasel}>
                 <div className='item'>
-                    <img src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg"  />
+                    <img src={"/storage/"+resep.resep[a-1].gambar} className='max-h-80 h-80'/>
                 </div>
                 <div className='item'>
-                    <img src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg"  />
+                    <img src={"/storage/"+resep.resep[a-2].gambar} className='max-h-80 h-80'/>
                 </div>
                 <div className='item'>
-                    <img src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg"  />
+                    <img src={"/storage/"+resep.resep[a-3].gambar} className='max-h-80 h-80'/>
                 </div>
                 <div className='item'>
-                    <img src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" />
+                    <img src={"/storage/"+resep.resep[a-4].gambar} className='max-h-80 h-80'/>
                 </div>
-            </OwlCarousel>;        
+            </OwlCarousel>        
             {/* <div className="carousel w-full">
             <div id="slide1" className="carousel-item relative w-full">
                 <img src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="w-full" />
