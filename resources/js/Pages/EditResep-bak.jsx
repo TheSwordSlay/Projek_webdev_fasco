@@ -2,8 +2,6 @@ import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head, router } from '@inertiajs/react';
 import { useEffect, useState } from 'react';
 import { usePage } from '@inertiajs/react';
-import Navbar from '@/Components/Navbar';
-import Footer from '@/Components/Footer';
 
 export default function EditResep(props) {
     const datas = [
@@ -115,7 +113,6 @@ export default function EditResep(props) {
             setJumlahBahan(tempList.slice(0, -1))
             setInputKey(Math.random());
             bahan.pop()
-            console.log(bahan)
         }
     }
 
@@ -125,7 +122,6 @@ export default function EditResep(props) {
             setJumlahLangkah(tempList.slice(0, -1))
             setInputKeyLangkah(Math.random());
             langkah.pop()
-            console.log(langkah)
         }
     }
 
@@ -152,11 +148,13 @@ export default function EditResep(props) {
       };
 
     return (
-      <div className='bg-neutral-content'>
-            <Head title="Edit resep" />
-            <Navbar user={props.auth.user}></Navbar>
+        <AuthenticatedLayout
+            user={props.accName}
+            header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Edit Resep</h2>}
+        >
+            <Head title="Dashboard" />
 
-            <div className="mx-12">
+            <div className="py-12">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                             {(flash.message != undefined) || (Reflect.ownKeys(props.errors).length > 0) ?
                                 <div className="alert alert-error my-4">
@@ -165,19 +163,9 @@ export default function EditResep(props) {
                                 </div>
                                 : <></>
                             }
-                    <div className="text-center text-3xl font-bold mt-8 font-[inter]">
-                      Edit Resep
-                    </div>
-                    <div className="bg-neutral-content overflow-hidden sm:rounded-lg px-8 py-8">
+                    <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg px-8 py-8">
 
-                        {image ? 
-                        <div className='flex justify-center'>                       
-                          <img src={blobUrl()} alt="Makanan" className='h-60'/> 
-                        </div>
-                          : 
-                        <div className='flex justify-center'>
-                          <img src={"/storage/"+props.myResep.gambar} alt="Makanan" className='h-60'/>
-                        </div>}
+                        {image ? <img src={blobUrl()} alt="Makanan" className='h-40'/> : <img src={"/storage/"+props.myResep.gambar} alt="Makanan" className='h-40'/>}
                         <p className='m-2'>Gambar makanan</p>
                         <input type="file" key={filekey || 'b' } className="file-input file-input-bordered file-input-primary bg-white w-full max-w-xs m-2" onChange={(image) => setImage(image.target.files[0])}/>
 
@@ -235,7 +223,6 @@ export default function EditResep(props) {
                     </div>
                 </div>
             </div>
-            <Footer></Footer>
-      </div>
+        </AuthenticatedLayout>
     );
 }

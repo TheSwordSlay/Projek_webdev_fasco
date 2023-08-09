@@ -45,9 +45,9 @@ const Navbar = ({user}) => {
           </div>
         </div> */}
 <div className="flex justify-center mb-5">
-  <object data="../img/kuliner-fest.svg" type="" width="350" height="153"></object>
+  <object data="/img/kuliner-fest.svg" type="" width="350" height="153"></object>
 </div>      
-<hr class="h-1 bg-neutral" />
+<hr className="h-1 bg-neutral" />
 <div className="navbar bg-neutral-content text-neutral">
   <div className="navbar-start">
     <Link href="/" method="GET" as="button"><a className="btn btn-ghost normal-case text-xl">KulinerFest</a></Link>
@@ -55,7 +55,7 @@ const Navbar = ({user}) => {
   <div className="navbar-center flex">
     <div className="px-1"><button className="btn btn-ghost">Home</button></div>
     <div className="px-1"><button className="btn btn-ghost">Resep</button></div>
-    <div className="px-1"><button className="btn btn-ghost">About us</button></div>
+    <Link href="/dashboard"><div className="px-1"><button className="btn btn-ghost">My Resep</button></div></Link>
     {/* <ul className="menu menu-horizontal px-1">
       <li><a>Item 1</a></li>
       <li><a>Item 2</a></li>
@@ -84,7 +84,7 @@ const Navbar = ({user}) => {
                     <span className="badge">New</span>
                   </Link>
                 </li>
-                <li><Link>Settings</Link></li>
+                <li><Link href={route('profile.edit')}>Edit Profile</Link></li>
                 <li><Link href={route('logout')} method="post" as="button">Logout</Link></li>
                   </>
                 }
@@ -92,7 +92,7 @@ const Navbar = ({user}) => {
             </div>
   </div>
 </div>
-<hr class="h-1 bg-neutral" />
+<hr className="h-1 bg-neutral" />
 
         {/* <hr class="drop-shadow-2xl my-3" /> */}
       </div>

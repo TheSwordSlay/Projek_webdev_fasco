@@ -5,8 +5,6 @@ import { Head, Link, router } from '@inertiajs/react';
 import { usePage } from '@inertiajs/react'
 import Swal from 'sweetalert2'
 import React from 'react';
-import Navbar from '@/Components/Navbar';
-import Footer from "@/Components/Footer";
 
 export default function Dashboard(props) {
     const { flash } = usePage().props
@@ -34,10 +32,12 @@ export default function Dashboard(props) {
           })
     }
     return (
-        <div className="bg-neutral-content">
+        <AuthenticatedLayout
+            user={props.accName}
+            header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Dashboard</h2>}
+        >
             <Head title="Dashboard" />
-            <Navbar user={props.auth.user}></Navbar>
-            <div className="py-12 mx-12">
+            <div className="py-12">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <Link href={route('add-resep')}>
                         <button className="btn btn-success mb-3">Tambah Resep</button>
@@ -55,7 +55,7 @@ export default function Dashboard(props) {
                             <table className="table">
                                 {/* head */}
                                 <thead>
-                                <tr className='bg-accent text-neutral'>
+                                <tr>
                                     <th>Nama Makanan</th>
                                     <th>Tipe</th>
                                     <th>Aksi</th>
@@ -106,7 +106,7 @@ export default function Dashboard(props) {
                                 </tbody>
                                 {/* foot */}
                                 <tfoot>
-                                <tr className='bg-accent text-neutral'>
+                                <tr>
                                     <th>Nama Makanan</th>
                                     <th>Tipe</th>
                                     <th>Aksi</th>
@@ -121,7 +121,6 @@ export default function Dashboard(props) {
                     </div>
                 </div>
             </div>
-            <Footer></Footer>
-        </div>
+        </AuthenticatedLayout>
     );
 }

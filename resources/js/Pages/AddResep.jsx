@@ -2,6 +2,8 @@ import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head, router } from '@inertiajs/react';
 import { useState } from 'react';
 import { usePage } from '@inertiajs/react';
+import Navbar from '@/Components/Navbar';
+import Footer from '@/Components/Footer';
 
 
 export default function AddResep(props) {
@@ -132,13 +134,10 @@ export default function AddResep(props) {
       };
 
     return (
-        <AuthenticatedLayout
-            user={props.accName}
-            header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Tambah resep</h2>}
-        >
-            <Head title="Dashboard" />
-
-            <div className="py-12">
+      <div className='bg-neutral-content'>
+            <Head title="Post resep" />
+            <Navbar user={props.auth.user}></Navbar>
+            <div className="mx-12">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                           {(flash.message != undefined) || (Reflect.ownKeys(props.errors).length > 0) ?
                                 <div className="alert alert-error my-4">
@@ -147,9 +146,16 @@ export default function AddResep(props) {
                                 </div>
                                 : <></>
                             }
-                    <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg px-8 py-8">
+                    <div className="text-center text-3xl font-bold mt-8 font-[inter]">
+                      Tambah Resep
+                    </div>
+                    <div className="bg-neutral-content overflow-hidden sm:rounded-lg px-8 py-8">
                         
-                        {image ? <img src={blobUrl()} alt="Makanan" className='h-40'/> : ""}
+                        {image ? 
+                        <div className='flex justify-center'>                       
+                        <img src={blobUrl()} alt="Makanan" className='h-60'/> 
+                        </div>
+                        : ""}
                         <p className='m-2'>Gambar makanan</p>
                         <input type="file" key={filekey || 'b' } className="file-input file-input-bordered file-input-primary bg-white w-full max-w-xs m-2" onChange={(image) => setImage(image.target.files[0])} />
 
@@ -207,6 +213,7 @@ export default function AddResep(props) {
                     </div>
                 </div>
             </div>
-        </AuthenticatedLayout>
+            <Footer></Footer>
+      </div>
     );
 }
