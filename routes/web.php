@@ -61,4 +61,12 @@ Route::get('/homepage', function () {
     return view('homepage');
 });
 
+Route::get('/input', function () {
+    return view('input');
+});
+
+Route::get('/masuk', function () {
+    return view('login');
+});
+
 require __DIR__.'/auth.php';
