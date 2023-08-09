@@ -42,6 +42,8 @@ Route::get('/resep', function () {
 Route::get('/resep/{resep:id}', [ResepController::class, 'show'])->name('resep');
 
 Route::post('/resep/delete', [ResepController::class, 'destroy'])->middleware(['auth', 'verified'])->name('delete.resep');
+Route::get('/resep/edit/{resep:id}', [ResepController::class, 'edit'])->middleware(['auth', 'verified'])->name('edit.resep');
+Route::post('/resep/update', [ResepController::class, 'update'])->middleware(['auth', 'verified'])->name('update.resep');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

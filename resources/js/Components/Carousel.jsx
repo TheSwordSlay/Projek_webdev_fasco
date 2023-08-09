@@ -8,17 +8,57 @@ const Carousel = (resep) => {
     return (
         <div className='h-100'>
             <OwlCarousel className='owl-theme' loop margin={10} items="1" autoplay="true" autoplayTimeout="3000" dots={fasel}>
-                <div className='item'>
-                    <img src={"/storage/"+resep.resep[a-1].gambar} className='max-h-80 h-80'/>
+                <div className='item h-80'>
+                    <img src={"/storage/"+resep.resep[a-1].gambar} className='max-h-full h-full relative'/>
+                    <div className='absolute text-white top-45 right-0 bottom-0 left-0 bg-gradient-to-t from-slate-800 to-transparent'>
+                        <div className='mx-8 my-8'>
+                            <p className='font-bold text-3xl my-2'>Resep {resep.resep[a-1].title}</p>
+                            <div className='flex'>
+                                <div className="badge badge-outline">{resep.resep[a-1].tipe}</div> 
+                                <div className="badge badge-outline mx-2">{resep.resep[a-1].daerah}</div>
+                            </div>
+                            
+                        </div>
+                    </div>
                 </div>
-                <div className='item'>
-                    <img src={"/storage/"+resep.resep[a-2].gambar} className='max-h-80 h-80'/>
+                <div className='item h-80 relative'>
+                    <img src={"/storage/"+resep.resep[a-2].gambar} className='max-h-full h-full relative'/>
+                    <div className='absolute text-white top-45 right-0 bottom-0 left-0 bg-gradient-to-t from-slate-800 to-transparent'>
+                        <div className='mx-8 my-8'>
+                            <p className='font-bold text-3xl my-2'>Resep {resep.resep[a-2].title}</p>
+                            <div className='flex'>
+                                <div className="badge badge-outline">{resep.resep[a-2].tipe}</div> 
+                                <div className="badge badge-outline mx-2">{resep.resep[a-2].daerah}</div>
+                            </div>
+                            
+                        </div>
+                    </div>
                 </div>
-                <div className='item'>
-                    <img src={"/storage/"+resep.resep[a-3].gambar} className='max-h-80 h-80'/>
+                <div className='item h-80 relative'>
+                    <img src={"/storage/"+resep.resep[a-3].gambar} className='max-h-full h-full relative'/>
+                    <div className='absolute text-white top-45 right-0 bottom-0 left-0 bg-gradient-to-t from-slate-800 to-transparent'>
+                        <div className='mx-8 my-8'>
+                            <p className='font-bold text-3xl my-2'>Resep {resep.resep[a-3].title}</p>
+                            <div className='flex'>
+                                <div className="badge badge-outline">{resep.resep[a-3].tipe}</div> 
+                                <div className="badge badge-outline mx-2">{resep.resep[a-3].daerah}</div>
+                            </div>
+                            
+                        </div>
+                    </div>
                 </div>
-                <div className='item'>
-                    <img src={"/storage/"+resep.resep[a-4].gambar} className='max-h-80 h-80'/>
+                <div className='item h-80 relative'>
+                    <img src={"/storage/"+resep.resep[a-4].gambar} className='max-h-full h-full relative'/>
+                    <div className='absolute text-white top-45 right-0 bottom-0 left-0 bg-gradient-to-t from-slate-800 to-transparent'>
+                        <div className='mx-8 my-8'>
+                            <p className='font-bold text-3xl my-2'>Resep {resep.resep[a-4].title}</p>
+                            <div className='flex'>
+                                <div className="badge badge-outline">{resep.resep[a-4].tipe}</div> 
+                                <div className="badge badge-outline mx-2">{resep.resep[a-4].daerah}</div>
+                            </div>
+                            
+                        </div>
+                    </div>
                 </div>
             </OwlCarousel>        
             {/* <div className="carousel w-full">

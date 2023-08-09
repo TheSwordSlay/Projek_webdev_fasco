@@ -4,10 +4,13 @@ import { MdDeleteOutline } from "react-icons/md";
 import { Head, Link, router } from '@inertiajs/react';
 import { usePage } from '@inertiajs/react'
 import Swal from 'sweetalert2'
+import React from 'react';
 
 export default function Dashboard(props) {
     const { flash } = usePage().props
-    console.log(props.myResep)
+    const conslelog = (i) => {
+        console.log(i)
+    }
 
     const confirmDelete = (i) => {
         const id = i
@@ -62,16 +65,16 @@ export default function Dashboard(props) {
                                 <tbody>
                                 {props.myResep && props.myResep.length > 0 ? props.myResep.map((data, i) => {
                                     return(
-                                        <>
+                                        <React.Fragment key={i}>
                                                                                         {/* row 1 */}
                                             <tr>
                                                 <td>
                                                 <div className="flex items-center space-x-3">
                                                     <div className="avatar">
                                                     <div className="mask mask-squircle w-12 h-12">
-                                                        <a href={"../resep/"+data.id}>
+                                                        <Link href={"../resep/"+data.id}>
                                                             <img src={"../storage/"+data.gambar} alt="Avatar Tailwind CSS Component" />
-                                                        </a>
+                                                        </Link>
                                                     </div>
                                                     </div>
                                                     <div>
@@ -85,11 +88,13 @@ export default function Dashboard(props) {
                                                 <br/>
                                                 </td>
                                                 <td>
+                                                    <Link href={"../resep/edit/"+data.id} as="button">
                                                     <button className="btn btn-info mx-3 tooltip" data-tip="Edit"><FiEdit size="1.5em" /></button>
+                                                    </Link>
                                                     <button className="btn btn-error tooltip" data-tip="Delete" onClick={() => confirmDelete(data.id)}><MdDeleteOutline size="1.5em" /></button>
                                                 </td>
                                             </tr>
-                                        </>
+                                        </React.Fragment>
                                     )
 
 
