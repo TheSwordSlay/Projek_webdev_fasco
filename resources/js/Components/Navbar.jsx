@@ -45,7 +45,7 @@ const Navbar = ({user}) => {
           </div>
         </div> */}
 <div className="flex justify-center mb-5">
-  <object data="/img/kuliner-fest.svg" type="" width="350" height="153"></object>
+  <object data="/img/kuliner-fest.svg" type="" height="100"></object>
 </div>      
 <hr className="h-1 bg-neutral" />
 <div className="navbar bg-neutral-content text-neutral">
@@ -53,7 +53,7 @@ const Navbar = ({user}) => {
     <Link href="/" method="GET" as="button"><a className="btn btn-ghost normal-case text-xl">KulinerFest</a></Link>
   </div>
   <div className="navbar-center flex">
-    <div className="px-1"><button className="btn btn-ghost">Home</button></div>
+    <div className="px-1"><Link href={route('homepage')}><button className="btn btn-ghost">Home</button></Link></div>
     <div className="px-1"><button className="btn btn-ghost">Resep</button></div>
     <Link href="/dashboard"><div className="px-1"><button className="btn btn-ghost">My Resep</button></div></Link>
     {/* <ul className="menu menu-horizontal px-1">
@@ -80,7 +80,7 @@ const Navbar = ({user}) => {
                   <>
                   <li>
                   <Link className="justify-between" href={route('dashboard')} as="button">
-                    Dashboard
+                    My Resep
                     <span className="badge">New</span>
                   </Link>
                 </li>

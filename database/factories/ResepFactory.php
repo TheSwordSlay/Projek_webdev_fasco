@@ -17,10 +17,20 @@ class ResepFactory extends Factory
 
     public function definition(): array
     {
+        function randomType($i){
+            if($i == 1) {
+                return "Cemilan";
+            } else if ($i == 2) {
+                return "Makanan berat";
+            } else {
+                return "Dessert";
+            }
+        }
+
         return [
-            'user_id' => rand(1, 4),
+            'user_id' => rand(1, 3),
             'title' => fake()->sentence(2),
-            'tipe' => "Dinner",
+            'tipe' => randomType(rand(1, 3)),
             'gambar' => "post-images/example.webp",
             'daerah' => "Sumatera Selatan",
             'deskripsi' => fake()->sentence(50),

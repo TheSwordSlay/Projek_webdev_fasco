@@ -1,15 +1,15 @@
 import OwlCarousel from 'react-owl-carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import { Link } from '@inertiajs/react';
 
 const Carousel = (resep) => {
     const a = resep.resep.length
-    const fasel = false;
     return (
         <div className='h-100'>
-            <OwlCarousel className='owl-theme' loop margin={10} items="1" autoplay="true" autoplayTimeout="3000" dots={fasel}>
+            <OwlCarousel className='owl-theme' loop margin={10} items="1" autoplay="true" autoplayTimeout="3000" dots={false} autoplayHoverPause={true}>
                 <div className='item h-80'>
-                    <img src={"/storage/"+resep.resep[a-1].gambar} className='max-h-full h-full relative'/>
+                    <Link href={"/resep/"+resep.resep[a-1].id}><img src={"/storage/"+resep.resep[a-1].gambar} className='max-h-full h-full relative'/></Link>
                     <div className='absolute text-white top-45 right-0 bottom-0 left-0 bg-gradient-to-t from-slate-800 to-transparent'>
                         <div className='mx-8 my-8'>
                             <p className='font-bold text-3xl my-2'>Resep {resep.resep[a-1].title}</p>
@@ -22,7 +22,7 @@ const Carousel = (resep) => {
                     </div>
                 </div>
                 <div className='item h-80 relative'>
-                    <img src={"/storage/"+resep.resep[a-2].gambar} className='max-h-full h-full relative'/>
+                    <Link href={"/resep/"+resep.resep[a-2].id}><img src={"/storage/"+resep.resep[a-2].gambar} className='max-h-full h-full relative'/></Link>
                     <div className='absolute text-white top-45 right-0 bottom-0 left-0 bg-gradient-to-t from-slate-800 to-transparent'>
                         <div className='mx-8 my-8'>
                             <p className='font-bold text-3xl my-2'>Resep {resep.resep[a-2].title}</p>
@@ -35,7 +35,7 @@ const Carousel = (resep) => {
                     </div>
                 </div>
                 <div className='item h-80 relative'>
-                    <img src={"/storage/"+resep.resep[a-3].gambar} className='max-h-full h-full relative'/>
+                    <Link href={"/resep/"+resep.resep[a-3].id}><img src={"/storage/"+resep.resep[a-3].gambar} className='max-h-full h-full relative'/></Link>
                     <div className='absolute text-white top-45 right-0 bottom-0 left-0 bg-gradient-to-t from-slate-800 to-transparent'>
                         <div className='mx-8 my-8'>
                             <p className='font-bold text-3xl my-2'>Resep {resep.resep[a-3].title}</p>
@@ -48,7 +48,7 @@ const Carousel = (resep) => {
                     </div>
                 </div>
                 <div className='item h-80 relative'>
-                    <img src={"/storage/"+resep.resep[a-4].gambar} className='max-h-full h-full relative'/>
+                    <Link href={"/resep/"+resep.resep[a-4].id}><img src={"/storage/"+resep.resep[a-4].gambar} className='max-h-full h-full relative'/></Link>
                     <div className='absolute text-white top-45 right-0 bottom-0 left-0 bg-gradient-to-t from-slate-800 to-transparent'>
                         <div className='mx-8 my-8'>
                             <p className='font-bold text-3xl my-2'>Resep {resep.resep[a-4].title}</p>

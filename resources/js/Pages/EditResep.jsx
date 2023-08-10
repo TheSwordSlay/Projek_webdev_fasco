@@ -179,7 +179,7 @@ export default function EditResep(props) {
                           <img src={"/storage/"+props.myResep.gambar} alt="Makanan" className='h-60'/>
                         </div>}
                         <p className='m-2'>Gambar makanan</p>
-                        <input type="file" key={filekey || 'b' } className="file-input file-input-bordered file-input-primary bg-white w-full max-w-xs m-2" onChange={(image) => setImage(image.target.files[0])}/>
+                        <input type="file" key={filekey || 'b' } className="file-input file-input-bordered file-input-primary bg-white w-full m-2" onChange={(image) => setImage(image.target.files[0])}/>
 
                         <input type="text" placeholder="Nama Makanan" className="bg-white m-2 input input-bordered input-primary w-full" onChange={(title) => setTitle(title.target.value)} defaultValue={props.myResep.title}/>
 
@@ -191,10 +191,38 @@ export default function EditResep(props) {
                             <label className="label">
                                 <span className="label-text">Pilih daerah asal makanan</span>
                             </label>
-                            <select className="select select-info w-full max-w-xs bg-white" defaultValue={props.myResep.daerah} onChange={e => setDaerah(e.target.value)}>
+                            <select className="select select-info w-full bg-white" defaultValue={props.myResep.daerah} onChange={e => setDaerah(e.target.value)}>
                             <option disabled value="">Pilih daerah makanan</option>
                             <option value="Sumatera Selatan">Sumatera Selatan</option>
+                            <option value="Sumatera Utara">Sumatera Utara</option>
+                            <option value="Sumatera Barat">Sumatera Barat</option>
+                            <option value="Jambi">Jambi</option>
+                            <option value="Lampung">Lampung</option>
+                            <option value="Riau">Riau</option>
+                            <option value="Aceh">Aceh</option>
+                            <option value="Riau">Riau</option>
+                            <option value="Bangka Belitung">Bangka Belitung</option>
+                            <option value="Kalimantan Barat">Kalimantan Barat</option>
+                            <option value="Kalimantan Timur">Kalimantan Timur</option>
+                            <option value="Kalimantan Selatan">Kalimantan Selatan</option>
+                            <option value="Kalimantan Tengah">Kalimantan Tengah</option>
+                            <option value="Kalimantan Utara">Kalimantan Utara</option>
+                            <option value="Banten">Banten</option>
+                            <option value="Jakarta">Jakarta</option>
                             <option value="Jawa Barat">Jawa Barat</option>
+                            <option value="Jawa Tengah">Jawa Tengah</option>
+                            <option value="Jawa Timur">Jawa Timur</option>
+                            <option value="Bali">Bali</option>
+                            <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
+                            <option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
+                            <option value="Gorontalo">Gorontalo</option>
+                            <option value="Sulawesi Barat">Sulawesi Barat</option>
+                            <option value="Sulawesi Timur">Sulawesi Timur</option>
+                            <option value="Sulawesi Selatan">Sulawesi Selatan</option>
+                            <option value="Sulawesi Tengah">Sulawesi Tengah</option>
+                            <option value="Sulawesi Utara">Sulawesi Utara</option>
+                            <option value="Maluku">Maluku</option>
+                            <option value="Papua">Papua</option>
                             </select>
                         </div>
 
@@ -203,7 +231,7 @@ export default function EditResep(props) {
                             <label className="label">
                                 <span className="label-text">Pilih tipe makanan</span>
                             </label>
-                            <select className="select select-info w-full max-w-xs bg-white" defaultValue={props.myResep.tipe} onChange={e => setTipe(e.target.value)}>
+                            <select className="select select-info w-full bg-white" defaultValue={props.myResep.tipe} onChange={e => setTipe(e.target.value)}>
                             <option disabled selected value="">Pilih tipe makanan</option>
                             <option value="Cemilan">Cemilan</option>
                             <option value="Makanan berat">Makanan berat</option>
@@ -215,21 +243,29 @@ export default function EditResep(props) {
                         <button className="btn btn-warning m-2" onClick={kurangBahan}>Kurangi Bahan</button>
 
                         <div key={inputkey || 'a'}>
+                          <ul className='list-disc pl-8'>
                             {jumlahbahan.map((data, i) => <div key={i}>
+                              <li>
                                 <input type="text" placeholder={"Bahan ke - " + (i+1)} className="m-2 input input-bordered input-primary w-full bg-white" onChange={updateState(i)} defaultValue={data}/>
+                                </li>
                                 </div> )}
+                          </ul>
                         </div>
 
                         <button className="btn btn-success m-2" onClick={tambahLangkah}>Tambah Langkah</button>
                         <button className="btn btn-warning m-2" onClick={kurangLangkah}>Kurangi Langkah</button>
 
                         <div key={inputkeyLangkah || 'c'}>
+                          <ol className='list-decimal pl-8'>
                             {jumlahlangkah.map((data, i) => <div key={i}>
+                              <li>
                                 <input type="text" placeholder={"Langkah ke - " + (i+1)} className="m-2 input input-bordered input-primary w-full bg-white" onChange={updateStateLangkah(i)} defaultValue={data}/>
+                              </li>
                                 </div> )}
+                          </ol>
                         </div>
 
-                        <button className="btn btn-primary m-2" onClick={() => handleSubmit()}>Submit</button>                       
+                        <button className="btn btn-primary m-2" onClick={() => handleSubmit()}>Update</button>                       
 
 
                     </div>

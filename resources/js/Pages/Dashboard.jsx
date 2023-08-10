@@ -55,7 +55,7 @@ export default function Dashboard(props) {
                             <table className="table">
                                 {/* head */}
                                 <thead>
-                                <tr className='bg-accent text-neutral'>
+                                <tr>
                                     <th>Nama Makanan</th>
                                     <th>Tipe</th>
                                     <th>Aksi</th>
@@ -106,7 +106,7 @@ export default function Dashboard(props) {
                                 </tbody>
                                 {/* foot */}
                                 <tfoot>
-                                <tr className='bg-accent text-neutral'>
+                                <tr>
                                     <th>Nama Makanan</th>
                                     <th>Tipe</th>
                                     <th>Aksi</th>
