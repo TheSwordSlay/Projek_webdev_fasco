@@ -52,9 +52,6 @@ export default function EditResep(props) {
         langkah.shift()
     }, [])
 
-    function konsol(i) {
-        console.log(i)
-    }
     function blobUrl() {
       const url = URL.createObjectURL(image)
       return url

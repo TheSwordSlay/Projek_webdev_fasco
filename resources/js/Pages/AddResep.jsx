@@ -1,4 +1,3 @@
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 import { Head, router } from '@inertiajs/react';
 import { useState } from 'react';
 import { usePage } from '@inertiajs/react';

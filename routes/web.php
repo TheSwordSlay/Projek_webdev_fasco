@@ -35,9 +35,7 @@ Route::get('/add-resep', function () {
     return Inertia::render('AddResep', ["accName" => auth()->user()]);
 })->middleware(['auth', 'verified'])->name('add-resep');
 
-Route::get('/resep', function () {
-    return Inertia::render('Resep');
-});
+Route::get('/resep', [ResepController::class, 'showAll'])->name('all.resep');
 
 Route::get('/resep/{resep:id}', [ResepController::class, 'show'])->name('resep');
 

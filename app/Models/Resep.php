@@ -14,6 +14,20 @@ class Resep extends Model
         'bahan' => 'array'
     ];
 
+    public function scopeFilter($query, array $filters){
+        $query->when($filters['search'] ?? false, function($query, $search) {
+            return $query->where('title', 'like', '%'.$search.'%');
+        });
+
+        $query->when($filters['daerah'] ?? false, function($query, $daerah) {
+            return $query->where('daerah', 'like', '%'.$daerah.'%');
+        });
+
+        $query->when($filters['tipe'] ?? false, function($query, $tipe) {
+            return $query->where('tipe', 'like', '%'.$tipe.'%');
+        });
+    }
+
     public function komentars() {
         return $this->hasMany(Komentar::class);
     }

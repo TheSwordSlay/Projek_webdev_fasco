@@ -6,6 +6,7 @@ use App\Models\Resep;
 use Inertia\Inertia;
 use App\Http\Requests\StoreResepRequest;
 use App\Http\Requests\UpdateResepRequest;
+use App\Http\Resources\ResepCollection;
 
 class ResepController extends Controller
 {
@@ -20,13 +21,18 @@ class ResepController extends Controller
         ]);
     }
 
-    // nunjukin untuk homepage
-    // public function homepage()
-    // {
-    //     return Inertia::render('Homepage', [
-    //         'resep' => Resep::all()
-    //     ]);
-    // }
+    
+    public function showAll()
+    {
+        $resep = new ResepCollection(Resep::latest()->filter(request(['search', 'daerah', 'tipe']))->paginate(9));
+        $prevData = request(['search', 'daerah', 'tipe']);
+        return Inertia::render('AllResep', [
+            'resep' => $resep,
+            'prevSearch' => request(['search']),
+            'prevTipe' => request(['tipe']),
+            'prevDaerah' => request(['daerah']),
+        ]);
+    }
 
     /**
      * Show the form for creating a new resource.

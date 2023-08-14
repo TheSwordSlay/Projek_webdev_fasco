@@ -22,23 +22,6 @@ const OneResep = (resep) => {
             <div className="text-xl mt-6 font-normal font-[roboto]"> 
                 <ul className="list-disc block mb-8">
                     {resep.resep.bahan.map((data, i) => <li key={i}>{data}</li>)}
-                    {/* <li>350 gram daging di potong</li>
-                    <li>1 buah lobak kecil</li>
-                    <li>1 batang sereh</li>
-                    <li>1 lembar daun salam</li>
-                    <li>1 lembar daun jeruk</li>
-                    <li>1 ruas lengkuas dan jahe</li>
-                    <li>garam dan kaldu</li>
-                    <li>air 500 ml dan 1000 ml</li>
-                    <li>minyak goreng</li>
-                    <li>5 siung bawang merah</li>
-                    <li>2 siung bawang putih</li>
-                    <li>1/2 sdt lada butir</li>
-                    <li>kacang kedelai rebus</li>
-                    <li>emping</li>
-                    <li>sambal</li>
-                    <li>seledri</li>
-                    <li>bawang goreng</li> */}
                 </ul>
             </div>
           </div>
