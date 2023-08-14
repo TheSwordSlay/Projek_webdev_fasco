@@ -4,10 +4,6 @@ import Footer from "@/Components/Footer";
 import ShowAllResep from "@/Components/ShowAllResep";
 import Pagination from "@/Components/Pagination";
 import { BiSearch } from "react-icons/bi";
-import { useState } from "react";
-import { Link } from "@inertiajs/react";
-import { useEffect } from "react";
-import { useLayoutEffect } from "react";
 import {useForm} from "@inertiajs/react";
 
 export default function AllResep(props) {
@@ -23,15 +19,6 @@ export default function AllResep(props) {
             _method: 'get'
         }));
       }
-    // const [search, setSearch] = useState('');
-    // const [tipe, setTipe] = useState('');
-    // const [daerah, setDaerah] = useState('');
-
-    useEffect(() => {
-        {!(props.prevSearch.search == null) ? setData('search', props.prevSearch.search) : ""}
-        {!(props.prevTipe.tipe == null) ? setData('tipe', props.prevTipe.tipe) : ""}
-        {!(props.prevDaerah.daerah == null) ? setData('daerah', props.prevDaerah.daerah) : ""}
-    }, [])
 
     return(
         <div className="bg-neutral-content">   
