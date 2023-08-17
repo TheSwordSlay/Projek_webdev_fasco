@@ -20,6 +20,7 @@ export default function AllResep(props) {
         }));
       }
 
+    console.log(props)
     return(
         <div className="bg-neutral-content">   
             <Head title="Search Resep"/>

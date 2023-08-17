@@ -13,4 +13,8 @@ class Reply extends Model
     public function komentar() {
         return $this->belongsTo(Komentar::class);
     }
+
+    public function replier() {
+        return $this->belongsTo(User::class, 'replierId');
+    }
 }

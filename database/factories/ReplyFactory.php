@@ -17,7 +17,9 @@ class ReplyFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'komentar_id' => rand(1, 48),
+            'replierId' => rand(1, 3),
+            'reply' => fake()->sentence(100)
         ];
     }
 }

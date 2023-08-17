@@ -14,14 +14,14 @@ const Navbar = ({user}) => {
           <div className="navbar-center flex">
             <div className="px-1"><Link href={route('homepage')}><button className="btn btn-ghost">Home</button></Link></div>
             <div className="px-1"><Link href={route('all.resep')}><button className="btn btn-ghost">Search Resep</button></Link></div>
-            <Link href="/dashboard"><div className="px-1"><button className="btn btn-ghost">My Resep</button></div></Link>
+            <Link href="/dashboard"><div className="px-1"><button className="btn btn-ghost">{!user ? "Bagikan Resep" : "My Resep"}</button></div></Link>
 
           </div>
           <div className="navbar-end">
                     <div className="dropdown dropdown-end">
                       <label tabIndex={0} className="">
-                        {!user ? <button className="btn btn-ghost mr-8">Login</button> :                 
-                        <button className="btn btn-ghost mr-8">Logged In</button>}
+                        {!user ? <button className="btn btn-ghost mr-8">Login / Register</button> :                 
+                        <button className="btn btn-ghost mr-8">Logged In as {user.name} </button>}
 
                       </label>
                       <ul tabIndex={0} className="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52 z-[50] relative text-black">

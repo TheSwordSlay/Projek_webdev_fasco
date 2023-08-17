@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Resep;
+use App\Models\Komentar;
+use App\Models\Reply;
+use App\Models\User;
 use Inertia\Inertia;
 use App\Http\Requests\StoreResepRequest;
 use App\Http\Requests\UpdateResepRequest;
@@ -16,15 +19,24 @@ class ResepController extends Controller
 
     public function index()
     {
+        $user = User::get();
+        $user->count();
+        $dessert = Resep::all()->where('tipe', 'Dessert');
+        $cemilan = Resep::all()->where('tipe', 'Cemilan');
+        $makananberat = Resep::all()->where('tipe', 'Makanan berat');
         return Inertia::render('Homepage', [
-            'resep' => Resep::all()
+            'resep' => Resep::with('author')->get(),
+            'jumlahUser' => $user->count(),
+            'jumlahDessert' => $dessert->count(),
+            'jumlahMakananBerat' => $makananberat->count(),
+            'jumlahCemilan' => $cemilan->count()
         ]);
     }
 
     
     public function showAll()
     {
-        $resep = new ResepCollection(Resep::latest()->filter(request(['search', 'daerah', 'tipe']))->paginate(9));
+        $resep = new ResepCollection(Resep::with('author')->latest()->filter(request(['search', 'daerah', 'tipe']))->paginate(9));
         $prevData = request(['search', 'daerah', 'tipe']);
         return Inertia::render('AllResep', [
             'resep' => $resep,
@@ -89,8 +101,10 @@ class ResepController extends Controller
      */
     public function show(Resep $resep)
     {
+        // dd($resep->komentars);
         return Inertia::render('Resep', [
-            "resep" => $resep
+            "resep" => $resep,
+            "author" => $resep->author
         ]);
     }
 

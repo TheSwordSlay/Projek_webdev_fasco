@@ -11,10 +11,14 @@ class Komentar extends Model
     protected $guarded = ['id'];
 
     public function replies() {
-        return $this->hasMany(Reply::class, 'reply_id');
+        return $this->hasMany(Reply::class);
     }
 
     public function resep() {
-        return $this->belongsTo(Resep::class);
+        return $this->belongsTo(Resep::class, 'resep_id');
+    }
+
+    public function commenter() {
+        return $this->belongsTo(User::class, 'commenterId');
     }
 }

@@ -6,6 +6,7 @@ import Footer from '@/Components/Footer';
 
 
 export default function AddResep(props) {
+  console.log(props)
     const datas = [
         {
           id: 1,
@@ -139,7 +140,7 @@ export default function AddResep(props) {
                           {(flash.message != undefined) || (Reflect.ownKeys(props.errors).length > 0) ?
                                 <div className="alert alert-error my-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                                    <span>Data yang diisi belum lengkap</span>
+                                    <span>Data yang diisi belum lengkap / tidak sesuai</span>
                                 </div>
                                 : <></>
                             }
@@ -157,10 +158,14 @@ export default function AddResep(props) {
                           <span className="label-text">Masukkan Foto</span>
                         </label>
                         <input type="file" key={filekey || 'b' } className="file-input file-input-bordered file-input-primary bg-white w-full mx-2 mb-2" onChange={(image) => setImage(image.target.files[0])} />
+                        {props.errors.image ? <label className="label mx-2">
+                          <span className="label-text text-red-600">{props.errors.image}</span>
+                        </label> : ""}
+
                         <label className="label mx-2">
                           <span className="label-text">Nama Makanan</span>
                         </label>
-                        <input type="text" placeholder="Nama Makanan" className="bg-white mx-2 input input-bordered input-primary w-full" onChange={(title) => setTitle(title.target.value)} value={title}/>
+                        <input type="text" placeholder="Nama Makanan" className="bg-white mx-2 input input-bordered input-primary w-full" onChange={(title) => setTitle(title.target.value)} value={title} required/>
                         <label className="label mx-2">
                           <span className="label-text">Deskripsi makanan</span>
                         </label>
@@ -253,7 +258,7 @@ export default function AddResep(props) {
                           </ol>
                         </div>
 
-                        <button className="btn btn-primary m-2" onClick={() => handleSubmit()}>Submit</button>
+                        <button className="btn btn-primary m-2" type="submit" onClick={() => handleSubmit()}>Submit</button>
 
 
                     </div>

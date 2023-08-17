@@ -17,7 +17,9 @@ class KomentarFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'resep_id' => rand(1, 48),
+            'commenterId' => rand(1, 3),
+            'komentar' => fake()->sentence(100)
         ];
     }
 }

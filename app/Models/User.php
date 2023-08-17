@@ -41,9 +41,18 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
+        'liked_post' => 'array'
     ];
 
     public function reseps() {
         return $this->hasMany(Resep::class);
+    }
+
+    public function komentars() {
+        return $this->hasMany(Komentar::class);
+    }
+
+    public function reply() {
+        return $this->hasMany(Reply::class);
     }
 }

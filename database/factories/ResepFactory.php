@@ -19,7 +19,7 @@ class ResepFactory extends Factory
     {
 
         return [
-            'user_id' => rand(1, 3),
+            'user_id' => rand(1, 10),
             'title' => fake()->sentence(2),
             'tipe' => "Dessert",
             'gambar' => "post-images/example.webp",

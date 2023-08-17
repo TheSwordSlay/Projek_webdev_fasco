@@ -100,7 +100,7 @@ export default function Dashboard(props) {
 
                                 }) : <tr>
                                     <div className='my-3 mx-5'>
-                                        Kamu tidak memiliki resep apapun
+                                        Anda tidak memiliki resep apapun
                                     </div>
                                     </tr>}
                                 </tbody>
