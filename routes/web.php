@@ -17,18 +17,10 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/welcome', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
-
 Route::get('/', [ResepController::class, 'index'])->name('homepage');
 
 Route::get('/dashboard', [ResepController::class, 'showDashboard'])->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard-admin', [ResepController::class, 'showDashboardAdmin'])->middleware(['auth', 'verified', 'isAdmin'])->name('admin');
 Route::post('/tambahresep', [ResepController::class, 'store'])->middleware(['auth', 'verified'])->name('tambahresep');
 
 Route::get('/add-resep', function () {
@@ -40,6 +32,7 @@ Route::get('/resep', [ResepController::class, 'showAll'])->name('all.resep');
 Route::get('/resep/{resep:id}', [ResepController::class, 'show'])->name('resep');
 
 Route::post('/resep/delete', [ResepController::class, 'destroy'])->middleware(['auth', 'verified'])->name('delete.resep');
+Route::post('/resep/delete-admin', [ResepController::class, 'deleteAdmin'])->middleware(['auth', 'verified'])->name('delete.resep.admin');
 Route::get('/resep/edit/{resep:id}', [ResepController::class, 'edit'])->middleware(['auth', 'verified'])->name('edit.resep');
 Route::post('/resep/update', [ResepController::class, 'update'])->middleware(['auth', 'verified'])->name('update.resep');
 

@@ -5,6 +5,8 @@ import { Head, Link, router } from '@inertiajs/react';
 import { usePage } from '@inertiajs/react'
 import Swal from 'sweetalert2'
 import React from 'react';
+import Navbar from '@/Components/Navbar';
+import Footer from "@/Components/Footer";
 
 export default function Dashboard(props) {
     const { flash } = usePage().props
@@ -27,21 +29,17 @@ export default function Dashboard(props) {
             confirmButtonText: 'Ya, saya yakin!'
           }).then((result) => {
             if (result.isConfirmed) {
-                router.post('/resep/delete', data)
+                router.post('/resep/delete-admin', data)
             }
           })
     }
     return (
-        <AuthenticatedLayout
-            user={props.accName}
-            header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Dashboard</h2>}
-        >
-            <Head title="Dashboard" />
-            <div className="py-12">
+        <div className="bg-neutral-content">
+            <Head title="Dashboard admin" />
+            <Navbar user={props.auth.user}></Navbar>
+            <div className="py-12 mx-12">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                    <Link href={route('add-resep')}>
-                        <button className="btn btn-success mb-3">Tambah Resep</button>
-                    </Link>
+                    <p className="mb-4 text-xl font-semibold">List semua resep</p>
                             {flash.message &&
                                 <div className="alert alert-success my-4">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -88,9 +86,6 @@ export default function Dashboard(props) {
                                                 <br/>
                                                 </td>
                                                 <td>
-                                                    <Link href={"../resep/edit/"+data.id} as="button">
-                                                    <button className="btn btn-info mx-3 tooltip" data-tip="Edit"><FiEdit size="1.5em" /></button>
-                                                    </Link>
                                                     <button className="btn btn-error tooltip" data-tip="Delete" onClick={() => confirmDelete(data.id)}><MdDeleteOutline size="1.5em" /></button>
                                                 </td>
                                             </tr>
@@ -100,7 +95,7 @@ export default function Dashboard(props) {
 
                                 }) : <tr>
                                     <div className='my-3 mx-5'>
-                                        Kamu tidak memiliki resep apapun
+                                        Anda tidak memiliki resep apapun
                                     </div>
                                     </tr>}
                                 </tbody>
@@ -121,6 +116,7 @@ export default function Dashboard(props) {
                     </div>
                 </div>
             </div>
-        </AuthenticatedLayout>
+            <Footer></Footer>
+        </div>
     );
 }

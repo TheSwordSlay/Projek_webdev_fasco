@@ -1,6 +1,18 @@
 import { Link } from "@inertiajs/react";
 
 const Navbar = ({user}) => {
+    let admin = false
+    let name = 'a'
+    let loggedIn = false
+    if (user) {
+      name = user.name
+      loggedIn = true
+    }
+
+    if (name == 'Admin') {
+      admin = true
+    }
+
     return (
       <div className="mx-12">
         <div className="flex justify-center mb-5">
@@ -14,7 +26,19 @@ const Navbar = ({user}) => {
           <div className="navbar-center flex">
             <div className="px-1"><Link href={route('homepage')}><button className="btn btn-ghost">Home</button></Link></div>
             <div className="px-1"><Link href={route('all.resep')}><button className="btn btn-ghost">Search Resep</button></Link></div>
-            <Link href="/dashboard"><div className="px-1"><button className="btn btn-ghost">{!user ? "Bagikan Resep" : "My Resep"}</button></div></Link>
+            {!user ? 
+              <Link href="/dashboard"><div className="px-1"><button className="btn btn-ghost">Bagikan Resep</button></div></Link>
+              : 
+              ""
+            }
+            {loggedIn && !admin ? 
+            <Link href="/dashboard"><div className="px-1"><button className="btn btn-ghost">My Resep</button></div></Link>
+            : 
+            ""}
+            {loggedIn && admin ? 
+            <Link href="/dashboard-admin"><div className="px-1"><button className="btn btn-ghost">Dashboard Admin</button></div></Link>
+            : 
+            ""}
 
           </div>
           <div className="navbar-end">

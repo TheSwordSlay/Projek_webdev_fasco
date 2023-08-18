@@ -18,7 +18,7 @@ export default function Guest({ children }) {
                     </div>
                 </div>
                 <div className="relative min-h-screen">
-                    <img className="w-full aspect-square brightness-50" src="https://i.pinimg.com/originals/c9/bd/85/c9bd85ee50f4edf984cbf363fc8442ae.jpg" />
+                    <img className="w-full aspect-square brightness-50" src="../img/decorationside.jpg" />
                     <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-6 max-w-md text-center">
                     <h1 className="mb-5 text-5xl font-bold text-white">Welcome Kulinerfest</h1>
                     <p className="mb-5 text-xl font-normal text-white">Dont have an account yet?</p>

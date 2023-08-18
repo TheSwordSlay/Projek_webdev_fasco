@@ -4,16 +4,28 @@ import Carousel from "@/Components/Carousel";
 import ShowCaseResep from "@/Components/ShowcaseResep";
 import Footer from "@/Components/Footer";
 import { BiSolidBowlRice, BiUser, BiSolidFoodMenu, BiLogoInstagram, BiLogoGithub, BiLogoLinkedinSquare} from "react-icons/bi";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 export default function Homepage(props) {
     console.log(props)
+    useEffect(() => {
+        AOS.init();
+        AOS.refresh();
+      }, []);
     return(
         <div className="bg-neutral-content">   
             <Head title="Homepage"/>
-            <Navbar user={props.auth.user}/>
+            <div className="relative z-[20]" data-aos="fade-up">
+                <Navbar user={props.auth.user}/>
+            </div>
             
-            <div className="grid grid-cols-3 gap-4 my-12 mx-12">
+            <div className="grid grid-cols-3 gap-4 my-12 mx-12 relative z-[0]">
                 <div className="col-span-2">
-                    <Carousel resep={props.resep}/>
+                    <div data-aos="fade-right">
+                        <Carousel resep={props.resep}/>
+                    </div>
                     <div className="text-center font-bold text-3xl mb-4 px-8 mt-8">
                         Resep Terbaru
                         <div className="flex justify-center mt-2"><object data="../img/divider.svg" type="" width="" ></object>   </div>
@@ -24,16 +36,16 @@ export default function Homepage(props) {
                 </div>
             
                 <div className="grid-rows-4">
-                    <div className="text-center font-bold text-3xl mb-4 px-8">
+                    <div className="text-center font-bold text-3xl mb-4 px-8" data-aos="fade-left">
                         About
                         <hr className="h-1 mx-auto mx-4 mt-3 bg-base-300" />
                     </div>
-                    <div className="row-span-3 mx-4 text-justify px-8">
+                    <div className="row-span-3 mx-4 text-justify px-8" data-aos="fade-left">
                         <p>Kuliner Fest adalah website kumpulan resep kuliner dari berbagai daerah di Indonesia, dimana anda dapat menemukan berbagai macam resep sesuai dengan kebutuhan kuliner anda.</p>
                         <br />
                         <p>Anda juga dapat berbagi resep di website ini, cukup dengan membuat akun di website ini, maka anda dapat berbagi resep dengan seluruh pengunjung website Kuliner Fest.</p>
                     </div>
-                    <div className="px-8 mt-10">
+                    <div className="px-8 mt-10" data-aos="fade-right">
                         <p className="bg-base-200 text-left font-semibold px-3 py-3">Website Stats</p>
                         <div className="bg-base-100 px-3 py-3 flex">
                             <BiSolidBowlRice size="1.45em"/> <p className="mx-3">Total resep : {props.resep.length}</p>
@@ -52,11 +64,11 @@ export default function Homepage(props) {
                         </div>
                     </div>
 
-                    <div className="px-8 mt-10">
+                    <div className="px-8 mt-10" data-aos="fade-right"> 
                         <p className="bg-base-200 text-left font-semibold px-3 py-3">Follow Us</p>
                         <div className="bg-base-100 px-3 py-3 flex">
                             <div className="w-20">
-                                <img className="rounded-full" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                                <img className="rounded-full" src="../img/fiqri.jpg" />
                             </div> 
                             <div className="ml-5">
                                 <div className="flex">
@@ -73,7 +85,7 @@ export default function Homepage(props) {
 
                         <div className="bg-base-100 px-3 py-3 flex">
                             <div className="w-20">
-                                <img className="rounded-full" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                                <img className="rounded-full" src="../img/rini.png" />
                             </div> 
                             <div className="ml-5">
                                 <div className="flex">
@@ -90,7 +102,7 @@ export default function Homepage(props) {
 
                         <div className="bg-base-100 px-3 py-3 flex">
                             <div className="w-20">
-                                <img className="rounded-full" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                                <img className="rounded-full" src="../img/putri.jpeg" />
                             </div> 
                             <div className="ml-5">
                                 <div className="flex">

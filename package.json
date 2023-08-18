@@ -21,6 +21,7 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "aos": "^2.3.4",
         "react-icons": "^4.10.1",
         "react-owl-carousel": "^2.3.3",
         "sweetalert2": "^11.7.20",

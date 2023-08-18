@@ -35,7 +35,7 @@ export default function Dashboard(props) {
     }
     return (
         <div className="bg-neutral-content">
-            <Head title="Dashboard" />
+            <Head title="Resepku" />
             <Navbar user={props.auth.user}></Navbar>
             <div className="py-12 mx-12">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">

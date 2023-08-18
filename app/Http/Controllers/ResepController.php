@@ -9,6 +9,7 @@ use App\Models\User;
 use Inertia\Inertia;
 use App\Http\Requests\StoreResepRequest;
 use App\Http\Requests\UpdateResepRequest;
+use App\Http\Requests\DeleteAdminRequest;
 use App\Http\Resources\ResepCollection;
 
 class ResepController extends Controller
@@ -120,6 +121,14 @@ class ResepController extends Controller
         ]);
     }
 
+    public function showDashboardAdmin(Resep $resep) {
+        $myResep = $resep::OrderByDesc('id')->get();
+        return Inertia::render('DashboardAdmin', [
+            "myResep" => $myResep,
+            "accName" => auth()->user()
+        ]);
+    }
+
     public function edit(Resep $resep)
     {
         $data = Resep::find($resep->id);
@@ -195,5 +204,12 @@ class ResepController extends Controller
         } else {
             return to_route('dashboard')->with('message', 'delete unauthorized');
         }
+    }
+
+    public function deleteAdmin(DeleteAdminRequest $request)
+    {
+        $data = Resep::find($request->id);
+        $data->delete();
+        return to_route('admin')->with('message', 'delete data berhasil');
     }
 }
