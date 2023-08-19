@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Auth;
 
-class AdminCheck
+class NotAdminCheck
 {
     /**
      * Handle an incoming request.
@@ -16,15 +16,14 @@ class AdminCheck
      */
     public function handle(Request $request, Closure $next): Response
     {
-        
         if (Auth::check()) {
             if (Auth::user()->email == 'admin@admin.com') {
-                return $next($request);
-            } else {
                 return redirect()->back();
+            } else {
+                return $next($request);
             }
         } else {
-            return redirect()->back();
+            return $next($request);
         }
     }
 }

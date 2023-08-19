@@ -122,7 +122,7 @@ class ResepController extends Controller
     }
 
     public function showDashboardAdmin(Resep $resep) {
-        $myResep = $resep::OrderByDesc('id')->get();
+        $myResep = $resep::OrderByDesc('id')->with('author')->get();
         return Inertia::render('DashboardAdmin', [
             "myResep" => $myResep,
             "accName" => auth()->user()
@@ -160,7 +160,7 @@ class ResepController extends Controller
         if(!($request->image == null)){
             $request->validate([
                 'title' => 'required|max:255',
-                'description' => 'required',
+                'deskripsi' => 'required',
                 'tipe' => 'required',
                 'image' => 'image|file',
                 'daerah' => 'required'
@@ -168,7 +168,7 @@ class ResepController extends Controller
         } else {
             $request->validate([
                 'title' => 'required|max:255',
-                'description' => 'required',
+                'deskripsi' => 'required',
                 'tipe' => 'required',
                 'daerah' => 'required'
            ]);

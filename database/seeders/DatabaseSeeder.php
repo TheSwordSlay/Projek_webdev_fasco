@@ -23,8 +23,8 @@ class DatabaseSeeder extends Seeder
             'password' => '$2y$10$Mkuawl97bcReDrV7mcNTPex4fGGa.99Eh5Unvu8inYJxVkNYgZpyu',
         ]);
         // \App\Models\User::factory(10)->create();
-        User::factory(12)->create();
-        Resep::factory(50)->create();
+        User::factory(3)->create();
+        Resep::factory(10)->create();
 
     }
 }

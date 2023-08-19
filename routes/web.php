@@ -37,7 +37,7 @@ Route::get('/resep/edit/{resep:id}', [ResepController::class, 'edit'])->middlewa
 Route::post('/resep/update', [ResepController::class, 'update'])->middleware(['auth', 'verified'])->name('update.resep');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::get('/profile', [ProfileController::class, 'edit'])->middleware('isNotAdmin')->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });

@@ -60,6 +60,7 @@ export default function EditResep(props) {
     const handleSubmit = () => {
         const trueBahan = []
         const trueLangkah = []
+        const deskripsi = description
         bahan.map((bahans) => {
             trueBahan.push(bahans.bahan)
         })
@@ -68,7 +69,7 @@ export default function EditResep(props) {
             trueLangkah.push(langkahs.langkah)
         })
         const data = {
-            id, title, description, trueBahan, trueLangkah, tipe, daerah, image
+            id, title, deskripsi, trueBahan, trueLangkah, tipe, daerah, image
         }
 
         console.log(data)
@@ -210,6 +211,7 @@ export default function EditResep(props) {
                             <option value="Jawa Tengah">Jawa Tengah</option>
                             <option value="Jawa Timur">Jawa Timur</option>
                             <option value="Bali">Bali</option>
+                            <option value="Bengkulu">Bengkulu</option>
                             <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
                             <option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
                             <option value="Gorontalo">Gorontalo</option>

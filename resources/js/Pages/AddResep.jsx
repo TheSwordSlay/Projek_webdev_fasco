@@ -199,6 +199,7 @@ export default function AddResep(props) {
                             <option value="Jawa Tengah">Jawa Tengah</option>
                             <option value="Jawa Timur">Jawa Timur</option>
                             <option value="Bali">Bali</option>
+                            <option value="Bengkulu">Bengkulu</option>
                             <option value="Nusa Tenggara Timur">Nusa Tenggara Timur</option>
                             <option value="Nusa Tenggara Barat">Nusa Tenggara Barat</option>
                             <option value="Gorontalo">Gorontalo</option>

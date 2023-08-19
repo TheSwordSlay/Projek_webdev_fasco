@@ -24,10 +24,6 @@ export default function Edit({ auth, mustVerifyEmail, status }) {
                     <div className="p-4 sm:p-8 bg-base-100 shadow sm:rounded-lg">
                         <UpdatePasswordForm className="max-w-xl" />
                     </div>
-
-                    <div className="p-4 sm:p-8 bg-base-100 shadow sm:rounded-lg">
-                        <DeleteUserForm className="max-w-xl" />
-                    </div>
                 </div>
             </div> 
             <Footer></Footer>

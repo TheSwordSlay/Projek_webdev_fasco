@@ -51,7 +51,7 @@ export default function Homepage(props) {
                             <BiSolidBowlRice size="1.45em"/> <p className="mx-3">Total resep : {props.resep.length}</p>
                         </div>
                         <div className="bg-base-100 px-3 py-3 flex">
-                            <BiUser size="1.45em"/> <p className="mx-3">Jumlah user : {props.jumlahUser}</p>
+                            <BiUser size="1.45em"/> <p className="mx-3">Jumlah user : {props.jumlahUser-1}</p>
                         </div>
                         <div className="bg-base-100 px-3 py-3 flex">
                             <BiSolidFoodMenu size="1.45em"/> <p className="mx-3">Resep Dessert : {props.jumlahDessert}</p>
@@ -109,7 +109,7 @@ export default function Homepage(props) {
                                     <BiLogoInstagram size="1.5em"></BiLogoInstagram><p className="text-sm ml-1">@azzahrahputri_16</p>
                                 </div>
                                 <div className="flex">
-                                    <BiLogoLinkedinSquare size="1.5em" /><p className="text-sm ml-1">---</p>
+                                    <BiLogoLinkedinSquare size="1.5em" /><p className="text-sm ml-1">Putri Amelia Az-zahrah</p>
                                 </div>
                                 <div className="flex">
                                     <BiLogoGithub size="1.5em" /><p className="text-sm ml-1">putriamelia16</p>

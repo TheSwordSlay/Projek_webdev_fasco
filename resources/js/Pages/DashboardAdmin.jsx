@@ -9,6 +9,7 @@ import Navbar from '@/Components/Navbar';
 import Footer from "@/Components/Footer";
 
 export default function Dashboard(props) {
+    console.log(props)
     const { flash } = usePage().props
     const conslelog = (i) => {
         console.log(i)
@@ -55,7 +56,8 @@ export default function Dashboard(props) {
                                 <thead>
                                 <tr>
                                     <th>Nama Makanan</th>
-                                    <th>Tipe</th>
+                                    <th>Pemilik Resep</th>
+                                    <th>Tipe Makanan</th>
                                     <th>Aksi</th>
                                     <th></th>
                                 </tr>
@@ -82,6 +84,9 @@ export default function Dashboard(props) {
                                                 </div>
                                                 </td>
                                                 <td>
+                                                    {data.author.name}
+                                                </td>
+                                                <td>
                                                 {data.tipe}
                                                 <br/>
                                                 </td>
@@ -95,7 +100,7 @@ export default function Dashboard(props) {
 
                                 }) : <tr>
                                     <div className='my-3 mx-5'>
-                                        Anda tidak memiliki resep apapun
+                                        Website ini belum memiliki resep apapun
                                     </div>
                                     </tr>}
                                 </tbody>

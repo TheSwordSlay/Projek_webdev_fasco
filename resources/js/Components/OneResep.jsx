@@ -3,7 +3,7 @@ const OneResep = (resep) => {
   <div>
 
 
-    <div className="container px-4">
+    <div className="px-4">
       <div className="text-center text-3xl font-bold mt-8 font-[inter]">
           Resep {resep.resep.title}
       </div>
@@ -21,8 +21,8 @@ const OneResep = (resep) => {
       <div className="grid grid-cols-4 gap-4 ml-28 my-10">
           <div className="text-3xl font-bold font-[inter]">Bahan:
             <div className="text-xl mt-6 font-normal font-[roboto] pl-8 pt-6 pb-6 bg-base-100 rounded-lg"> 
-                <ul className="list-disc block">
-                    {resep.resep.bahan.map((data, i) => <li key={i}>{data}</li>)}
+                <ul className="list-disc block mr-5">
+                    {resep.resep.bahan.map((data, i) => <li key={i} className="mb-3">{data}</li>)}
                 </ul>
             </div>
           </div>
