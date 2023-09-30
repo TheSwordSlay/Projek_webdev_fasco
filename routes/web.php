@@ -31,7 +31,10 @@ Route::get('/resep', [ResepController::class, 'showAll'])->name('all.resep');
 
 Route::get('/resep/{resep:id}', [ResepController::class, 'show'])->name('resep');
 
+
 Route::post('/resep/delete', [ResepController::class, 'destroy'])->middleware(['auth', 'verified'])->name('delete.resep');
+
+
 Route::post('/resep/delete-admin', [ResepController::class, 'deleteAdmin'])->middleware(['auth', 'verified'])->name('delete.resep.admin');
 Route::get('/resep/edit/{resep:id}', [ResepController::class, 'edit'])->middleware(['auth', 'verified'])->name('edit.resep');
 Route::post('/resep/update', [ResepController::class, 'update'])->middleware(['auth', 'verified'])->name('update.resep');
