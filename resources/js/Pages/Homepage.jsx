@@ -34,7 +34,7 @@ export default function Homepage(props) {
                     <ShowCaseResep resep={props.resep} user={props.auth.user}/>
                     <Link href={route('all.resep')}><p className="text-center text-accent-focus">Search All Resep</p></Link>                   
                 </div>
-            
+       
                 <div className="grid-rows-4">
                     <div className="text-center font-bold text-3xl mb-4 px-8" data-aos="fade-left">
                         About

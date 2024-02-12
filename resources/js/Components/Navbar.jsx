@@ -9,7 +9,7 @@ const Navbar = ({user}) => {
       loggedIn = true
     }
 
-    if (name == 'admin@admin.com') {
+  if (name == 'admin@admin.com') {
       admin = true
     }
 
